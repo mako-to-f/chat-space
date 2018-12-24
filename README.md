@@ -21,6 +21,7 @@
 |email|string|null: false|
 
 ### Association
+- has_many :messages
 - has_many :relations
 - has_many :groups, through :relations
 
