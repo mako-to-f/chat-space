@@ -6,8 +6,8 @@
 |------|----|-------|
 |body|text|null: false|
 |image|string|null: true|
-|user-id|integer|null: false|
-|group-id|integer|null: false|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
 
 ### Association
 - belongs_to :user
