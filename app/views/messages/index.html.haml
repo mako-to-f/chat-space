@@ -1,0 +1,46 @@
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
+        user-name
+      .chat-side__user-utility
+        %a.chat-side__user-utility--new-group
+          %i.fa.fa-edit
+        %a.chat-side__user-utility--edit-user
+          %i.fa.fa-cog
+  .chat-side__groups
+    .chat-side__groups-list
+      %a
+        .chat-side__group
+          .chat-side__group-name
+            group-name
+          .chat-side__group-message
+            まだメッセージはありません
+
+.chat-main
+  .chat-main__header
+    .chat-main__header--group
+      .chat-main__header--group-name
+        group-name
+      .chat-main__header--group-member
+        group-member
+    %a.chat-main__header--group-edit
+      Edit
+  .chat-main__body
+    .chat-main__body--message-list
+      .chat-main__message
+        .chat-main__message-name
+          message-name
+        .chat-main__message-time
+          0000/00/00 00:00:00
+        .chat-main__message-body
+          message-body
+  .chat-main__footer
+    %form
+      .chat-main__footer-body
+        %input.message{type: "text", value: "type a message"}
+        %label.message_image
+          %i.fa.fa-image
+          %input.message_image-file{type: "file"}
+        %input.submit{type: "submit", value: "Send"}
+
