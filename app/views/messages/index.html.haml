@@ -1,43 +1,43 @@
-%div.chat-side
-  %div.chat-side__user
-    %div.chat-side__user-content
-      %div.chat-side__user-name
+.chat-side
+  .chat-side__user
+    .chat-side__user-content
+      .chat-side__user-name
         user-name
-      %div.chat-side__user-utility
+      .chat-side__user-utility
         %a.chat-side__user-utility--new-group
           %i.fa.fa-edit
         %a.chat-side__user-utility--edit-user
           %i.fa.fa-cog
-  %div.chat-side__groups
-    %div.chat-side__groups-list
+  .chat-side__groups
+    .chat-side__groups-list
       %a
-        %div.chat-side__group
-          %div.chat-side__group-name
+        .chat-side__group
+          .chat-side__group-name
             group-name
-          %div.chat-side__group-message
+          .chat-side__group-message
             まだメッセージはありません
 
-%div.chat-main
-  %div.chat-main__header
-    %div.chat-main__header--group
-      %div.chat-main__header--group-name
+.chat-main
+  .chat-main__header
+    .chat-main__header--group
+      .chat-main__header--group-name
         group-name
-      %div.chat-main__header--group-member
+      .chat-main__header--group-member
         group-member
     %a.chat-main__header--group-edit
       Edit
-  %div.chat-main__body
-    %div.chat-main__body--message-list
-      %div.chat-main__message
-        %div.chat-main__message-name
+  .chat-main__body
+    .chat-main__body--message-list
+      .chat-main__message
+        .chat-main__message-name
           message-name
-        %div.chat-main__message-time
+        .chat-main__message-time
           0000/00/00 00:00:00
-        %div.chat-main__message-body
+        .chat-main__message-body
           message-body
-  %div.chat-main__footer
+  .chat-main__footer
     %form
-      %div.chat-main__footer-body
+      .chat-main__footer-body
         %input.message{type: "text", value: "type a message"}
         %label.message_image
           %i.fa.fa-image
