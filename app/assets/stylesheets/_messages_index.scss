@@ -44,11 +44,11 @@ $chatSideFontColor: #FFFFFF;
     }
   }
   &__group {
-    padding: 20px;
+    padding: 0 20px;
     &-name {
       color: $chatSideFontColor;
       font-size: 15px;
-      padding-bottom: 5px;
+      padding: 20px 0 5px 0;
     }
     &-message {
       color: $chatSideFontColor;
