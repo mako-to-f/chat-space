@@ -12,12 +12,13 @@
             = fa_icon 'cog', class: 'icon'
   .chat-side__groups
     .chat-side__groups-list
-      %a
-        .chat-side__group
-          .chat-side__group-name
-            group-name
-          .chat-side__group-message
-            まだメッセージはありません
+      .chat-side__group
+        - current_user.groups.each do |group|
+          = link_to group_messages_path(group) do
+            .chat-side__group-name
+              = group.name
+            .chat-side__group-message
+              まだメッセージはありません
 
 .chat-main
   .chat-main__header
