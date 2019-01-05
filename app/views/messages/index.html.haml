@@ -5,8 +5,8 @@
         group-name
       .chat-main__header--group-member
         group-member
-    %a.chat-main__header--group-edit
-      Edit
+    .chat-main__header--group-edit
+      = link_to 'Edit', edit_group_path(current_user)
   .chat-main__body
     .chat-main__body--message-list
       .chat-main__message
