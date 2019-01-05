@@ -17,11 +17,12 @@
         .chat-main__message-body
           message-body
   .chat-main__footer
-    %form
+    .form
       .chat-main__footer-body
-        %input.message{type: "text", value: "type a message"}
-        %label.message_image
-          %i.fa.fa-image
-          %input.message_image-file{type: "file"}
-        %input.submit{type: "submit", value: "Send"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'message', placeholder: 'type a message'
+          = f.label :image, class: 'message_image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'message_image-file'
+          = f.submit 'Send', class: 'submit'
 
