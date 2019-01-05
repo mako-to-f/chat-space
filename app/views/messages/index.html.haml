@@ -1,27 +1,27 @@
+.chat-side
+  = render 'shared/chat_side'
+
 .chat-main
   .chat-main__header
     .chat-main__header--group
       .chat-main__header--group-name
-        group-name
+        = @group.name
       .chat-main__header--group-member
-        group-member
-    %a.chat-main__header--group-edit
-      Edit
+        Member :
+        - @group.users.each do |user|
+          = user.name
+    .chat-main__header--group-edit
+      = link_to 'Edit', edit_group_path(current_user)
   .chat-main__body
     .chat-main__body--message-list
-      .chat-main__message
-        .chat-main__message-name
-          message-name
-        .chat-main__message-time
-          0000/00/00 00:00:00
-        .chat-main__message-body
-          message-body
+      = render @messages
   .chat-main__footer
-    %form
+    .form
       .chat-main__footer-body
-        %input.message{type: "text", value: "type a message"}
-        %label.message_image
-          %i.fa.fa-image
-          %input.message_image-file{type: "file"}
-        %input.submit{type: "submit", value: "Send"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'message', placeholder: 'type a message'
+          = f.label :image, class: 'message_image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'message_image-file'
+          = f.submit 'Send', class: 'submit'
 
