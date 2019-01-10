@@ -4,6 +4,7 @@ $chatSideFontColor: #FFFFFF;
   width: 300px;
   height: 100vh;
   float: left;
+  position: fixed;
   &__user {
     background-color: #253141;
     height: 15%;
@@ -93,8 +94,9 @@ $chatSideFontColor: #FFFFFF;
     }
   }
   &__body {
-    height: calc( 100vh - 15% - 90px );
+    height: calc( 100vh - 15% - 90px);
     background-color: #FFFFFF;
+    overflow-y: scroll;
     &--message-list {
       padding: 6px 0 0 40px;
     }
@@ -121,14 +123,16 @@ $chatSideFontColor: #FFFFFF;
     }
   }
   &__footer {
+    height: 90px;
     padding: 0 40px;
+    background-color: #AAAAAA;
     &-body {
       position: relative;
     }
   }
 }
 
-.message {
+.message_form {
   margin: 20px 0;
   padding-left: 10px;
   font-size: 16px;
@@ -142,7 +146,7 @@ $chatSideFontColor: #FFFFFF;
   height: 50px;
   position: absolute;
   top: 20px;
-  right: 125px;
+  right: 130px;
   text-align: center;
   line-height: 50px;
   &-file {
