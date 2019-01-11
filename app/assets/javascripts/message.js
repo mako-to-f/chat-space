@@ -55,5 +55,9 @@ $(function() {
         scrollTop: $('.chat-main__body--message-list').outerHeight(true)}, 'fast');
       $('.submit').prop('disabled', false);
     })
-  })
-})
+    .fail(function() {
+      alert('error');
+      $('.submit').prop('disabled', false);
+    });
+  });
+});
