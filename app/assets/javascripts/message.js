@@ -44,13 +44,12 @@ $(function() {
       if(data.content !== "") {
         var html = buildContentHTML(data);
         $('.chat-main__body--message-list').append(html)
-        $('.message_form').val('')
       }
       if(data.image_url !== null) {
         var html = buildImageHTML(data);
         $('.chat-main__body--message-list').append(html)
-        $('.message_image-file').val(null)
       }
+      $('#new_message')[0].reset()
       $('.chat-main__body').animate( {
         scrollTop: $('.chat-main__body--message-list').outerHeight(true)}, 'fast');
       $('.submit').prop('disabled', false);
