@@ -41,11 +41,11 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      if(data.content !== "") {
+      if(data.content) {
         var html = buildContentHTML(data);
         $('.chat-main__body--message-list').append(html)
       }
-      if(data.image_url !== null) {
+      if(data.image_url) {
         var html = buildImageHTML(data);
         $('.chat-main__body--message-list').append(html)
       }
