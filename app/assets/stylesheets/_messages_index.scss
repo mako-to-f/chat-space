@@ -4,7 +4,6 @@ $chatSideFontColor: #FFFFFF;
   width: 300px;
   height: 100vh;
   float: left;
-  position: fixed;
   &__user {
     background-color: #253141;
     height: 15%;
@@ -102,7 +101,7 @@ $chatSideFontColor: #FFFFFF;
     }
   }
   &__message {
-    padding-top: 40px;
+    margin: 40px 0px;
     &-name {
       font-size: 16px;
       color: #434A54;
