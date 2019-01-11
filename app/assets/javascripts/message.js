@@ -51,6 +51,8 @@ $(function() {
         $('.chat-main__body--message-list').append(html)
         $('.message_image-file').val(null)
       }
+      $('.chat-main__body').animate( {
+        scrollTop: $('.chat-main__body--message-list').outerHeight(true)}, 'fast');
       $('.submit').prop('disabled', false);
     })
   })
