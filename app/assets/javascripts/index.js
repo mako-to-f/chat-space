@@ -17,6 +17,7 @@ $(function() {
                 </div>`
     search_list.append(html);
   }
+
   function appendMember(userId, userName) {
     var html = `<div class="chat-group-user clearfix js-chat-member" id="chat-group-user-8">
                   <input name="group[user_ids][]" type="hidden" value="${ userId }">
@@ -64,8 +65,11 @@ $(function() {
     var userId = eventTaget.getAttribute('data-user-id');
     var userName = eventTaget.getAttribute('data-user-name');
     appendMember(userId, userName);
+  })
 
-
-    console.log(dataUserName);
+  $('.chat-group-form__field--right').on('click', '.user-search-remove', function() {
+    var eventTaget = event.target
+    var eventParent = eventTaget.parentNode
+    eventParent.remove();
   })
 });
