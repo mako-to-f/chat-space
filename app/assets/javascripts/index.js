@@ -47,4 +47,8 @@ $(function() {
       alert('ユーザー検索に失敗しました')
     })
   });
+
+  $('.chat-group-form__field--right').on('click', '.user-search-add', function() {
+    console.log('ok')
+  })
 });
