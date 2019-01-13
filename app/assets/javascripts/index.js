@@ -59,17 +59,13 @@ $(function() {
   });
 
   $('.chat-group-form__field--right').on('click', '.user-search-add', function() {
-    var eventTaget = event.target
-    var eventParent = eventTaget.parentNode
-    eventParent.remove();
-    var userId = eventTaget.getAttribute('data-user-id');
-    var userName = eventTaget.getAttribute('data-user-name');
+    this.parentNode.remove();
+    var userId = this.getAttribute('data-user-id');
+    var userName = this.getAttribute('data-user-name');
     appendMember(userId, userName);
   })
 
   $('.chat-group-form__field--right').on('click', '.user-search-remove', function() {
-    var eventTaget = event.target
-    var eventParent = eventTaget.parentNode
-    eventParent.remove();
+    this.parentNode.remove();
   })
 });
