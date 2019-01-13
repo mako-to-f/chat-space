@@ -59,4 +59,30 @@ $(function() {
       $('.submit').prop('disabled', false);
     });
   });
+
+  if(location.href.match(/\/groups\/\d+\/messages/)){
+    setInterval(function() {
+      $.ajax( {
+        type:     'GET',
+        url:      location.href,
+        dataType: 'json'
+      })
+      .done(function(data) {
+        $('.chat-main__body--message-list').empty();
+        data.forEach(function(message) {
+          if(message.content) {
+            var html = buildContentHTML(message);
+            $('.chat-main__body--message-list').append(html)
+          }
+          if(message.image_url) {
+            var html = buildImageHTML(message);
+            $('.chat-main__body--message-list').append(html)
+          }
+        });
+      })
+      .fail(function(data) {
+        alert('自動更新に失敗しました');
+      });
+    }, 5000);
+  }
 });
