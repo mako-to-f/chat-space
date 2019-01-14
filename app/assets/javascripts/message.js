@@ -10,8 +10,9 @@ $(function() {
           ${message.created_at}
         </div>
         <div class="chat-main__message-body">
-          ${message.content} ${insertImage}
+          ${message.content}
         </div>
+          ${insertImage}
       </div>`
     return html;
   }
