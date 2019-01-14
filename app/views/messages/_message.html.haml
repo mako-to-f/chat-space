@@ -2,7 +2,7 @@
   .chat-main__message-name
     = message.user.name
   .chat-main__message-time
-    = message.created_at.strftime('%Y/%m/%d %H:%M')
+    = message.created_at.to_s(:default)
   .chat-main__message-body
     - if message.content.present?
       = message.content
