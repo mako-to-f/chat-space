@@ -1,9 +1,8 @@
-.chat-main__message
+.chat-main__message{ "data-message-id": "#{message.id}" }
   .chat-main__message-name
     = message.user.name
   .chat-main__message-time
     = message.created_at.to_s(:default)
   .chat-main__message-body
-    - if message.content.present?
-      = message.content
+    = message.content if message.content.present?
     = image_tag message.image.url if message.image.present?
