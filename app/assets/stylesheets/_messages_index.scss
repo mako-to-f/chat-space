@@ -39,6 +39,7 @@ $chatSideFontColor: #FFFFFF;
   &__groups {
     background-color: #2f3e51;
     height: 85%;
+    overflow-y: scroll;
     &-list {
       min-height: 100%;
     }
