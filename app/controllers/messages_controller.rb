@@ -6,9 +6,9 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user)
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         @messages = @group.messages.where('id > ?', params[:last_message_id])
-      }
+      end
     end
   end
 
@@ -16,10 +16,10 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
-        format.html {
+        format.html do
           redirect_to group_messages_path(@group),
           notice: 'メッセージが送信されました'
-        }
+        end
         format.json
       end
     else
@@ -34,6 +34,7 @@ class MessagesController < ApplicationController
   def message_params
     params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
+
   def set_group
     @group = Group.find(params[:group_id])
   end

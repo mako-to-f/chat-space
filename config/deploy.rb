@@ -64,7 +64,7 @@ set :default_env, {
   AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
 }
 
-set :linked_files, %w{ config/secrets.yml }
+set :linked_files, %w{config/secrets.yml}
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 
