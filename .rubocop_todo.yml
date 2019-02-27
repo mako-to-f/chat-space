@@ -10,9 +10,9 @@
 # Cop supports --auto-correct.
 # Configuration parameters: TreatCommentsAsGroupSeparators, Include.
 # Include: **/*.gemfile, **/Gemfile, **/gems.rb
-Bundler/OrderedGems:
-  Exclude:
-    - 'Gemfile'
+# Bundler/OrderedGems:
+#   Exclude:
+#     - 'Gemfile'
 
 # Offense count: 3
 # Cop supports --auto-correct.
@@ -25,100 +25,100 @@ Layout/AlignParameters:
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Layout/CommentIndentation:
-  Exclude:
-    - 'app/uploaders/image_uploader.rb'
+# Layout/CommentIndentation:
+#   Exclude:
+#     - 'app/uploaders/image_uploader.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowAdjacentOneLineDefs, NumberOfEmptyLines.
-Layout/EmptyLineBetweenDefs:
-  Exclude:
-    - 'app/controllers/messages_controller.rb'
+# Layout/EmptyLineBetweenDefs:
+#   Exclude:
+#     - 'app/controllers/messages_controller.rb'
 
 # Offense count: 13
 # Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'Gemfile'
-    - 'config/deploy/production.rb'
-    - 'config/deploy/staging.rb'
+# Layout/EmptyLines:
+#   Exclude:
+#     - 'Gemfile'
+#     - 'config/deploy/production.rb'
+#     - 'config/deploy/staging.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
-Layout/EmptyLinesAroundAccessModifier:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
+# Layout/EmptyLinesAroundAccessModifier:
+#   Exclude:
+#     - 'app/controllers/groups_controller.rb'
 
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: empty_lines, no_empty_lines
-Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'spec/controllers/messages_controller_spec.rb'
-    - 'spec/models/message_spec.rb'
+# Layout/EmptyLinesAroundBlockBody:
+#   Exclude:
+#     - 'spec/controllers/messages_controller_spec.rb'
+#     - 'spec/models/message_spec.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'app/controllers/users_controller.rb'
+# Layout/EmptyLinesAroundClassBody:
+#   Exclude:
+#     - 'app/controllers/users_controller.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment, ForceEqualSignAlignment.
-Layout/ExtraSpacing:
-  Exclude:
-    - 'config/initializers/carrierwave.rb'
+# Layout/ExtraSpacing:
+#   Exclude:
+#     - 'config/initializers/carrierwave.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowForAlignment.
-Layout/SpaceAroundOperators:
-  Exclude:
-    - 'config/initializers/carrierwave.rb'
+# Layout/SpaceAroundOperators:
+#   Exclude:
+#     - 'config/initializers/carrierwave.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
 # SupportedStyles: space, no_space
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceBeforeBlockBraces:
-  Exclude:
-    - 'spec/controllers/messages_controller_spec.rb'
+# Layout/SpaceBeforeBlockBraces:
+#   Exclude:
+#     - 'spec/controllers/messages_controller_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBrackets: space, no_space
-Layout/SpaceInsideArrayLiteralBrackets:
-  Exclude:
-    - 'config/environments/production.rb'
+# Layout/SpaceInsideArrayLiteralBrackets:
+#   Exclude:
+#     - 'config/environments/production.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'config/deploy.rb'
+# Layout/SpaceInsidePercentLiteralDelimiters:
+#   Exclude:
+#     - 'config/deploy.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
-Layout/TrailingBlankLines:
-  Exclude:
-    - 'config/application.rb'
+# Layout/TrailingBlankLines:
+#   Exclude:
+#     - 'config/application.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: AllowInHeredoc.
-Layout/TrailingWhitespace:
-  Exclude:
-    - 'config/initializers/devise.rb'
+# Layout/TrailingWhitespace:
+#   Exclude:
+#     - 'config/initializers/devise.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
@@ -158,10 +158,10 @@ Style/BlockComments:
 # ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
 # FunctionalMethods: let, let!, subject, watch
 # IgnoredMethods: lambda, proc, it
-Style/BlockDelimiters:
-  Exclude:
-    - 'app/controllers/messages_controller.rb'
-    - 'spec/controllers/messages_controller_spec.rb'
+# Style/BlockDelimiters:
+#   Exclude:
+#     - 'app/controllers/messages_controller.rb'
+#     - 'spec/controllers/messages_controller_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
@@ -184,10 +184,10 @@ Style/ClassAndModuleChildren:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: compact, expanded
-Style/EmptyMethod:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'app/controllers/users_controller.rb'
+# Style/EmptyMethod:
+#   Exclude:
+#     - 'app/controllers/groups_controller.rb'
+#     - 'app/controllers/users_controller.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
