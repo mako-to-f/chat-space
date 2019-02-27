@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Message, type: :model do
   describe '#create' do
-
     context 'can save' do
       # メッセージがあれば保存できる
       it 'is valid with content' do
@@ -42,6 +41,5 @@ RSpec.describe Message, type: :model do
         expect(message.errors[:user]).to include('を入力してください')
       end
     end
-
   end
 end

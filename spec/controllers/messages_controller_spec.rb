@@ -6,7 +6,6 @@ describe MessagesController do
   let(:user) { create(:user) }
 
   describe '#index' do
-
     context 'log in' do
       before do
         login user
@@ -35,7 +34,6 @@ describe MessagesController do
         expect(response).to redirect_to(new_user_session_path)
       end
     end
-
   end
 
   describe '#create' do
@@ -82,14 +80,10 @@ describe MessagesController do
     end
 
     context 'not log in' do
-
       it 'redirects to new_user_session_path' do
         post :create, params: params
         expect(response).to redirect_to(new_user_session_path)
       end
-
     end
-
   end
-
 end
