@@ -51,7 +51,7 @@ describe MessagesController do
         }
 
         it 'count up message' do
-          expect{ subject }.to change(Message, :count).by(1)
+          expect { subject }.to change(Message, :count).by(1)
         end
 
         it 'redirects to group_messages_path' do
@@ -69,7 +69,7 @@ describe MessagesController do
         }
 
         it 'does not count up' do
-          expect{ subject }.not_to change(Message, :count)
+          expect { subject }.not_to change(Message, :count)
         end
 
         it 'renders index' do
